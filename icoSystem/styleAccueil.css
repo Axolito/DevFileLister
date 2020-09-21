@@ -7,6 +7,7 @@ body {
 	width: 75%;
 	margin-left: auto;
  	margin-right: auto;
+ 	margin-bottom: 20vh;
 }
 
 .tuile {
@@ -50,4 +51,14 @@ h1 {
 
 .iconeHome {
 	height: 40px;
+}
+
+.aboutUs {
+	background-color: rgb(226 226 226);
+
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	right: 0px;
+	left: 0px;
 }

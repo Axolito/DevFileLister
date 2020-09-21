@@ -131,6 +131,13 @@
 		</div>
 
 
+		<div class="aboutUs">
+
+			<h2>Retrouvez ce "listeur de fichiers" sur <a href="https://github.com/Axolito/DevFileLister/">GitHub</a></h2>
+
+		</div>
+
+
 	</body>
 </html>
 
