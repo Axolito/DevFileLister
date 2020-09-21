@@ -1,0 +1,53 @@
+body {
+	background-color: white;
+	text-align: center;
+}
+
+.autoOrganisation {
+	width: 75%;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+.tuile {
+	display: inline-block;
+	background-color: rgb(226 226 226);
+	border-radius: 20px;
+	box-shadow: 4px 5px 0px 1px #565656;
+	transition: 0.5s;
+
+	margin: 20px;
+}
+
+.tuile:hover {
+	box-shadow: 8px 14px 0px 3px #565656;
+}
+
+
+h2 {
+	margin: 0px;
+}
+
+h1 {
+	margin-top: 5px;
+}
+
+.lienTuile {
+	display:block;
+	padding: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+.imgTuile {
+	height: 15vh;
+}
+
+.imgTuilePicture {
+	height: 15vh;
+	box-shadow: 3px 3px 8px 0px #737373;
+}
+
+.iconeHome {
+	height: 40px;
+}
