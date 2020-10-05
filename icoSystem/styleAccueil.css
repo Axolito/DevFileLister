@@ -3,6 +3,13 @@ body {
 	text-align: center;
 }
 
+a {
+	color: blue;
+}
+a:hover {
+	color: #8b58dc;
+}
+
 .autoOrganisation {
 	width: 75%;
 	margin-left: auto;
@@ -15,7 +22,7 @@ body {
 	background-color: rgb(226 226 226);
 	border-radius: 20px;
 	box-shadow: 4px 5px 0px 1px #565656;
-	transition: 0.5s;
+	transition: 0.2s;
 
 	margin: 20px;
 }

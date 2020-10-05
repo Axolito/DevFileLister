@@ -40,6 +40,12 @@
 				echo "<h1>Dosier racine</h1>";
 			}
 
+			// Détection d'un "../" afin d'éviter l'exploration des dossiers systeme
+			elseif (!(strpbrk ('..',$_GET["dir"]) == FALSE)) {
+				header("Location: ./");
+				exit;
+			}
+
 			else {		//Sinon afficher le dossier courant
 				$liste_rep = scandir("./".$_GET["dir"]);
 				$curent_dir = $_GET["dir"] . "/";
@@ -53,6 +59,10 @@
 
 
 			<?php
+
+
+
+
 
 				if (count($liste_rep) == 2) {		//Affiche "le dossier est vide" si le dossier est vide
 					echo "<h2>Le dossier est vide</h2>";
@@ -89,12 +99,36 @@
 
 						//Icone fichier PHP
 						if (strrchr($liste_rep[$i],".")==".php") {
-							echo '<img src="icoSystem/php.png" class="imgTuile">';
+							//echo '<img src="icoSystem/php.png" class="imgTuile">';
+
+
+							//Application d'une vignette si celle ci existe
+							$thumbnail = "icoSystem/thumbnails/".str_replace(".php", ".jpg", $liste_rep[$i]);
+
+
+							if (file_exists($thumbnail)) {
+								echo '<img src="'.$thumbnail.'" class="imgTuilePicture">';
+							}
+							else {
+								echo '<img src="icoSystem/php.png" class="imgTuile">';
+							}
 						}
 
 						//Icone fichier HTML
 						elseif (strrchr($liste_rep[$i],".")==".html") {
-							echo '<img src="icoSystem/html.png" class="imgTuile">';
+							//echo '<img src="icoSystem/html.png" class="imgTuile">';
+
+
+							//Application d'une vignette si celle ci existe
+							$thumbnail = "icoSystem/thumbnails/".str_replace(".html", ".jpg", $liste_rep[$i]);
+
+
+							if (file_exists($thumbnail)) {
+								echo '<img src="'.$thumbnail.'" class="imgTuilePicture">';
+							}
+							else {
+								echo '<img src="icoSystem/html.png" class="imgTuile">';
+							}
 						}
 
 						//Icone fichier CSS
@@ -133,7 +167,7 @@
 
 		<div class="aboutUs">
 
-			<h2>Retrouvez ce "listeur de fichiers" sur <a href="https://github.com/Axolito/DevFileLister/">GitHub</a></h2>
+			<h2>Retrouvez ce "listeur de fichiers" sur le <a href="https://github.com/Axolito/DevFileLister/">GitHub</a> de Axel BRUA</h2>
 
 		</div>
 
